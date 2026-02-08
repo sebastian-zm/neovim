@@ -86,6 +86,9 @@
               vim.lsp.enable('jsonls')
               vim.lsp.enable('eslint')
               vim.lsp.enable('lemminx')
+
+              vim.o.exrc = true
+              vim.o.secure = true
             '';
             customRC = ''
               set mouse=nvi
@@ -99,7 +102,9 @@
         );
       in
       {
-        packages.default = neovim;
+        packages = {
+          default = neovim;
+        };
 
         apps.default = {
           type = "app";
