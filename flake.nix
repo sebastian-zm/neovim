@@ -36,7 +36,6 @@
             inherit name src;
           };
           optional = false;
-          type = "lua";
         };
 
         plugins = map mkNvimPlugin [
